@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "1744126803372",
+    "bookTitle": "Influence",
+    "author": "Avtor0",
+    "genre": "Self development",
+    "rating": "5",
+    "insight": "Very nice book."
+  },
+  {
+    "bookTitle": "Book2",
+    "author": "Avtor2",
+    "genre": "Janr2",
+    "rating": "2",
+    "insight": "Insayt2",
+    "id": 1744129009169
+  }
+]

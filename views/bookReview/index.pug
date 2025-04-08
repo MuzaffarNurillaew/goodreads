@@ -3,6 +3,8 @@ include ../head.pug
 body
   .container.mt-5
     h1 List
+    form(action=`/reviews/add` method="GET" style="display:inline")
+      button.btn.btn-primary.btn-sm(type="submit") Add
     table.table.table-responsive.table-hover.table-striped.table-dark
       thead
         tr

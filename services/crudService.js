@@ -40,9 +40,10 @@ function createCrudService(fileName) {
 
     async update(id, updatedItem) {
       const items = await readData();
-      const index = items.findIndex(item => item.id === id);
-      if (index !== -1) {
-        items[index] = { ...items[index], ...updatedItem };
+      const index = items.findIndex(item => item.id == id);
+      console.log(id, updatedItem);
+      if (index != -1) {
+        items[index] = updatedItem;
         await writeData(items);
       }
     },

@@ -20,7 +20,7 @@ const bookReviewController = {
     },
     editForm: async (req, res) =>{
         const reviewId = req.params.id;
-        const review = reviewsDb.getById(reviewId);
+        const review = await reviewsDb.getById(reviewId);
         if (!review) {
             return res.status(404).send('Review not found');
         }
@@ -28,7 +28,8 @@ const bookReviewController = {
         res.render('bookReview/edit', { review: review });
     },
     update: async (req, res) => {
-        reviewsDb.create(req.body)
+        console.log(req.body);
+        await reviewsDb.update(req.body.id, req.body)
         res.redirect('/reviews');
     },
     deleteForm: async (req, res) =>{

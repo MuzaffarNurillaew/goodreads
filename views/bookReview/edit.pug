@@ -4,7 +4,7 @@ body
   .container.mt-5
     h1 Edit Review
     form(action="/reviews/update" method="POST")
-      
+      input(type="hidden" name="id" value=review.id)
       .mb-3
         label(for="bookTitle" class="form-label") Book title
         input(type="text" class="form-control" id="bookTitle" name="bookTitle" value=review.bookTitle required)
