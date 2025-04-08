@@ -1,0 +1,29 @@
+include ../head.pug
+
+body
+  .container.mt-5
+    h1 List
+    table.table.table-responsive.table-hover.table-striped.table-dark
+      thead
+        tr
+          th(scope="col") ID
+          th(scope="col") Book title
+          th(scope="col") Author
+          th(scope="col") Genre
+          th(scope="col") Rating
+          th(scope="col") Insight
+          th(scope="col") Actions
+      tbody
+        each review in reviews
+          tr
+            td= review.id
+            td= review.bookTitle
+            td= review.author
+            td= review.genre
+            td= review.rating
+            td= review.insight
+            td
+              form(action=`/reviews/update/${review.id}` method="GET" style="display:inline")
+                button.btn.btn-primary.btn-sm(type="submit") Update
+              form(action=`/reviews/delete/${review.id}` method="GET" style="display:inline")
+                button.btn.btn-danger.btn-sm(type="submit") Delete

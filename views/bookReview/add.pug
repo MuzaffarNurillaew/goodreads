@@ -1,0 +1,25 @@
+include ../head.pug
+
+body
+  .container.mt-5
+    h1 Add Review
+    form(action="/reviews/add" method="POST")
+      .mb-3
+        label(for="bookTitle" class="form-label") Book title
+        input(type="text" class="form-control" id="bookTitle" name="bookTitle")
+
+      .mb-3
+        label(for="author" class="form-label") Author
+        input(type="text" class="form-control" id="author" name="author")
+
+      .mb-3
+        label(for="genre" class="form-label") Genre
+        input(type="text" class="form-control" id="genre" name="genre")
+      .mb-3
+        label(for="rating" class="form-label") Rating (1-5)
+        input(type="number" class="form-control" id="rating" name="rating")
+      .mb-3
+        label(for="insight" class="form-label") Insights
+        textarea(class="form-control" id="insight" name="insight" rows="3" required)
+
+      button(type="submit" class="btn btn-primary") Update

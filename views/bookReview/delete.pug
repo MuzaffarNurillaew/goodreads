@@ -1,0 +1,5 @@
+h1 Are you sure you want to delete this review?
+p This action cannot be undone.
+form(action=`/reviews/delete/${review.id}` method="POST")
+  button.btn.btn-danger(type="submit") Delete
+  a.btn.btn-secondary(href="/reviews") Cancel
